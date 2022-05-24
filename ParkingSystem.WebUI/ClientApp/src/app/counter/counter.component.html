@@ -1,0 +1,6 @@
+<h1>Get Parking Ticket</h1>
+
+
+<p aria-live="polite">You Ticket Number is: <strong>{{ currentCount }}</strong></p>
+<p *ngIf="currentCount== 500" aria-live="polite"><strong>Parking lot is full, Please try again later!</strong></p>
+<button class="btn btn-primary" (click)="generateTicket()">Generate Ticket</button>

@@ -27,5 +27,14 @@ namespace ParkingSystem.WebUI.Service
             
             return 500;
         }
+        public void MakePayment(TicketPayment payment)
+        {
+            using (var context = new ParkingLotSystemContext(_configuration))
+            {
+                context.TicketPayment.Add(payment);
+                context.SaveChanges();
+            }
+           
+        }
     }
 }

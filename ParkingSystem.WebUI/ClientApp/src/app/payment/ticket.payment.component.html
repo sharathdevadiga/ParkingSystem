@@ -1,0 +1,10 @@
+﻿<h1>Pay Parking Ticket</h1>
+
+
+<p aria-live="polite">Ticket Number is:</p>
+<input type="number" max="500" name="ticket" value="" />
+<br />
+<p aria-live="polite">Credit card number:</p>
+<input type="text" name="name" value="" />
+<button class="btn btn-primary" (click)="makePayment()">Pay</button>
+<p *ngIf="isPaymentCompelete" aria-live="polite"><strong>Goodbye! {{ cost }}</strong></p>

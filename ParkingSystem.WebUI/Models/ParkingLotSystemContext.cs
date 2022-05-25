@@ -24,6 +24,8 @@ namespace ParkingSystem.WebUI.Models
         }
         public virtual DbSet<Ticket> Ticket { get; set; }
 
+        public virtual DbSet<TicketPayment> TicketPayment { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
